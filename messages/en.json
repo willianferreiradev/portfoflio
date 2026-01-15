@@ -14,5 +14,99 @@
     "portuguese": "Portuguese",
     "english": "English",
     "spanish": "Spanish"
+  },
+  "hero": {
+    "badge": "Available for projects",
+    "title": {
+      "part1": "Creative",
+      "part2": "Developer"
+    },
+    "description": "Crafting bold digital experiences that blend artistry with cutting-edge technology.",
+    "buttons": {
+      "primary": "Explore My Work",
+      "secondary": "Let's Connect"
+    },
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "badge": "About Me",
+    "title": {
+      "part1": "Blending",
+      "part2": "Creativity",
+      "part3": "&",
+      "part4": "Code"
+    },
+    "intro": {
+      "text1": "I'm a",
+      "highlight": "passionate developer",
+      "text2": "who believes that great software is an art form. With expertise in building modern web and mobile applications, I transform complex challenges into elegant, user-centered solutions."
+    },
+    "approach": "My approach combines technical excellence with creative problem-solving. Every pixel matters, every interaction should feel magical, and every line of code should serve a purpose.",
+    "toolkit": {
+      "title": "My Creative Toolkit",
+      "technologies": {
+        "react": "React",
+        "reactnative": "React Native",
+        "typescript": "TypeScript",
+        "nodejs": "Node.js",
+        "database": "Database",
+        "php": "PHP"
+      }
+    }
+  },
+  "projects": {
+    "badge": "Featured Work",
+    "title": {
+      "part1": "Selected",
+      "part2": "Projects"
+    },
+    "description": "A showcase of creative solutions that push boundaries and deliver exceptional experiences.",
+    "items": [
+      {
+        "title": "Analytics Dashboard",
+        "description": "A comprehensive analytics platform with real-time data visualization, custom reports, and actionable insights.",
+        "technologies": ["React", "TypeScript", "Charts"]
+      },
+      {
+        "title": "E-Commerce Mobile App",
+        "description": "Cross-platform mobile shopping experience with seamless checkout, product search, and advanced features.",
+        "technologies": ["React Native", "Node.js", "Stripe"]
+      },
+      {
+        "title": "API Documentation Platform",
+        "description": "Developer-friendly API documentation tool with interactive examples, code snippets, and testing capabilities.",
+        "technologies": ["TypeScript", "REST API", "Docs"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": {
+      "part1": "Let's Create",
+      "part2": "Together"
+    },
+    "description": "Have a project in mind? I'd love to hear about it. Send me a message and let's bring your vision to life.",
+    "directTitle": "Or connect directly",
+    "directDescription": "Feel free to reach out through any of these platforms. I'm always excited to discuss new ideas and opportunities.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "sections": {
+    "about": {
+      "title": "About Section",
+      "placeholder": "This section will be developed next"
+    },
+    "projects": {
+      "title": "Projects Section",
+      "placeholder": "This section will be developed next"
+    },
+    "contact": {
+      "title": "Contact Section",
+      "placeholder": "This section will be developed next"
+    }
   }
 }

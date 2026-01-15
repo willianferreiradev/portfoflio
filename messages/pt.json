@@ -14,5 +14,99 @@
     "portuguese": "Português",
     "english": "Inglês",
     "spanish": "Espanhol"
+  },
+  "hero": {
+    "badge": "Disponível para projetos",
+    "title": {
+      "part1": "Creative",
+      "part2": "Developer"
+    },
+    "description": "Criando experiências digitais ousadas que combinam arte com tecnologia de ponta.",
+    "buttons": {
+      "primary": "Explorar Meu Trabalho",
+      "secondary": "Vamos Conversar"
+    },
+    "scroll": "Role para explorar"
+  },
+  "about": {
+    "badge": "Sobre Mim",
+    "title": {
+      "part1": "Combinando",
+      "part2": "Criatividade",
+      "part3": "&",
+      "part4": "Código"
+    },
+    "intro": {
+      "text1": "Sou um",
+      "highlight": "desenvolvedor apaixonado",
+      "text2": "que acredita que um ótimo software é uma forma de arte. Com expertise em construir aplicações web e mobile modernas, transformo desafios complexos em soluções elegantes e centradas no usuário."
+    },
+    "approach": "Minha abordagem combina excelência técnica com resolução criativa de problemas. Cada pixel importa, cada interação deve ser mágica, e cada linha de código deve servir a um propósito.",
+    "toolkit": {
+      "title": "Meu Kit de Ferramentas Criativo",
+      "technologies": {
+        "react": "React",
+        "reactnative": "React Native",
+        "typescript": "TypeScript",
+        "nodejs": "Node.js",
+        "database": "Database",
+        "php": "PHP"
+      }
+    }
+  },
+  "projects": {
+    "badge": "Trabalhos em Destaque",
+    "title": {
+      "part1": "Projetos",
+      "part2": "Selecionados"
+    },
+    "description": "Uma vitrine de soluções criativas que ultrapassam limites e oferecem experiências excepcionais.",
+    "items": [
+      {
+        "title": "Painel de Analytics",
+        "description": "Uma plataforma abrangente de analytics com visualização de dados em tempo real, relatórios personalizados e insights acionáveis.",
+        "technologies": ["React", "TypeScript", "Charts"]
+      },
+      {
+        "title": "App Mobile E-Commerce",
+        "description": "Experiência de compras móvel multiplataforma com checkout perfeito, busca de produtos e recursos avançados.",
+        "technologies": ["React Native", "Node.js", "Stripe"]
+      },
+      {
+        "title": "Plataforma de Documentação API",
+        "description": "Ferramenta de documentação de API amigável para desenvolvedores com exemplos interativos, snippets de código e testes.",
+        "technologies": ["TypeScript", "REST API", "Docs"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Entre em Contato",
+    "title": {
+      "part1": "Vamos Criar",
+      "part2": "Juntos"
+    },
+    "description": "Tem um projeto em mente? Adoraria saber mais sobre ele. Me mande uma mensagem e vamos dar vida à sua visão.",
+    "directTitle": "Ou entre em contato diretamente",
+    "directDescription": "Fique à vontade para me contatar através de qualquer uma dessas plataformas. Estou sempre animado para discutir novas ideias e oportunidades.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "sections": {
+    "about": {
+      "title": "Seção Sobre",
+      "placeholder": "Esta seção será desenvolvida em seguida"
+    },
+    "projects": {
+      "title": "Seção Projetos",
+      "placeholder": "Esta seção será desenvolvida em seguida"
+    },
+    "contact": {
+      "title": "Seção Contato",
+      "placeholder": "Esta seção será desenvolvida em seguida"
+    }
   }
 }
