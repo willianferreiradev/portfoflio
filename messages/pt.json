@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "languages": {
+    "portuguese": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol"
+  }
+}
