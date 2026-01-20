@@ -171,7 +171,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className={`md:hidden rounded-full cursor-pointer ${
+            className={`md:hidden rounded-full cursor-pointer absolute right-0 ${
               !isScrolled && 'text-primary-foreground'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

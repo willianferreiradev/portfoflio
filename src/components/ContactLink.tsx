@@ -51,19 +51,19 @@ export function ContactLink({
   return (
     <button
       onClick={handleClick}
-      className={`group relative p-6 bg-background/50 rounded-2xl border border-border/50 hover:border-coral/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-coral/10 flex items-center gap-4 w-full text-left cursor-pointer ${className}`}
+      className={`group relative p-4 sm:p-6 bg-background/50 rounded-2xl border border-border/50 hover:border-coral/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-coral/10 flex items-center gap-3 sm:gap-4 w-full text-left cursor-pointer ${className}`}
     >
       <div
-        className={`w-12 h-12 rounded-xl bg-gradient-to-r ${colorClass} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
+        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r ${colorClass} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
       >
-        <IconComponent className="w-6 h-6 text-white" />
+        <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
       </div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="text-lg font-semibold text-foreground group-hover:text-coral transition-colors">
+        <h3 className="text-base sm:text-lg font-semibold text-foreground group-hover:text-coral transition-colors">
           {platform}
         </h3>
-        <p className="text-sm text-muted-foreground truncate">
+        <p className="text-xs sm:text-sm text-muted-foreground truncate">
           {icon === 'whatsapp' ? `+${url}` : url}
         </p>
       </div>

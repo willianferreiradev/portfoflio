@@ -67,7 +67,7 @@ export function ContactSection({ id, className = '' }: ContactSectionProps) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto px-4">
             {contactLinks.map((link, index) => (
               <div
                 key={link.platform}

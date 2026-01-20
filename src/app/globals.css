@@ -15,7 +15,15 @@ select,
 [data-clickable] {
   cursor: pointer;
 }
+/* Prevent horizontal overflow */
+html,
+body {
+  overflow-x: hidden;
+}
 
+* {
+  box-sizing: border-box;
+}
 @theme {
   /* Font families */
   --font-display: Syne, sans-serif;
