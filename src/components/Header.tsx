@@ -64,9 +64,11 @@ export function Header() {
   };
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
+        isMobileMenuOpen ? 'z-[70]' : 'z-50'
+      } ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-xl shadow-lg border-b border-white/10 py-3 md:py-3 py-4'
+          ? 'bg-background/95 backdrop-blur-xl shadow-lg border-b border-white/10 py-4 md:py-3'
           : 'bg-transparent py-6'
       }`}
     >
@@ -176,18 +178,22 @@ export function Header() {
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            <Menu className="h-6 w-6" />
           </Button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-full bg-background/98 backdrop-blur-xl border-b border-border animate-fade-in min-h-screen z-40">
+        <div className="md:hidden fixed inset-x-0 top-0 pt-20 animate-fade-in min-h-screen z-[60] bg-black/95 backdrop-blur-xl">
+          {/* Close button inside menu */}
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-4 right-4 p-2 rounded-full bg-background/20 hover:bg-background/40 text-white transition-colors z-10"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
           <nav className="container mx-auto px-4 py-8 flex flex-col gap-2 min-h-[calc(100vh-80px)]">
             {navLinks.map((link, index) => (
               <button
