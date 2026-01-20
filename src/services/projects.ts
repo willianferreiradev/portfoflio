@@ -16,58 +16,13 @@ export async function getProjects(): Promise<ProjectItem[]> {
     return projects.map((project: Project) => ({
       title: project.name,
       description: project.description,
-      technologies: extractTechnologies(project.description),
+      technologies: project.tags || ['Web', 'Frontend'],
       image: project.image_url,
       link: project.url,
     }));
   } catch (error) {
     return getFallbackProjects();
   }
-}
-
-// Extract technologies from description (basic implementation)
-// Consider adding a separate technologies field in your database
-function extractTechnologies(description: string): string[] {
-  const techKeywords = [
-    'React',
-    'TypeScript',
-    'Next.js',
-    'Node.js',
-    'JavaScript',
-    'Python',
-    'Vue',
-    'Angular',
-    'Svelte',
-    'Express',
-    'FastAPI',
-    'Django',
-    'PostgreSQL',
-    'MongoDB',
-    'Redis',
-    'GraphQL',
-    'REST API',
-    'Tailwind',
-    'CSS',
-    'HTML',
-    'AWS',
-    'Vercel',
-    'Docker',
-    'Stripe',
-    'Charts',
-    'Docs',
-    'Mobile',
-    'E-Commerce',
-    'Analytics',
-  ];
-
-  const foundTechs = techKeywords.filter((tech) =>
-    description.toLowerCase().includes(tech.toLowerCase()),
-  );
-
-  // Return first 3 technologies or default ones
-  return foundTechs.length > 0
-    ? foundTechs.slice(0, 3)
-    : ['Web', 'Frontend', 'Backend'];
 }
 
 // Fallback projects if Supabase fails

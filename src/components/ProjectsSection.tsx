@@ -4,6 +4,7 @@ import { ProjectBadge } from './ProjectBadge';
 import { ProjectCard } from './ProjectCard';
 import { ExternalLink } from 'lucide-react';
 import { ProjectItem } from '@/types/project';
+import Link from 'next/link';
 
 interface ProjectsSectionProps {
   id?: string;
@@ -78,10 +79,12 @@ export function ProjectsSection({
             className="text-center mt-16 animate-fade-in-up"
             style={{ animationDelay: '1.2s' }}
           >
-            <button className="group inline-flex items-center gap-3 px-8 py-4 bg-background border border-border/50 hover:border-coral/30 text-foreground hover:text-coral rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-coral/10">
-              <span>Ver Todos os Projetos</span>
-              <ExternalLink className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </button>
+            <Link href="/projetos">
+              <button className="group inline-flex items-center gap-3 px-8 py-4 bg-background border border-border/50 hover:border-coral/30 text-foreground hover:text-coral rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-coral/10">
+                <span>Ver Todos os Projetos</span>
+                <ExternalLink className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

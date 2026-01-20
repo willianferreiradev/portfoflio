@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   image_url: string;
   url: string;
+  tags: string[];
   created_at: string;
 }
 
