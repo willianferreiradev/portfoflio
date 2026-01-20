@@ -19,9 +19,16 @@ export function ProjectCard({
   link,
   className = '',
 }: ProjectCardProps) {
+  const handleClick = () => {
+    if (link) {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div
-      className={`group relative bg-background/50 rounded-2xl border border-border/50 overflow-hidden hover:border-coral/30 transition-all duration-500 hover:shadow-2xl hover:shadow-coral/10 hover:-translate-y-2 flex flex-col h-full ${className}`}
+      onClick={handleClick}
+      className={`group relative bg-background/50 rounded-2xl border border-border/50 overflow-hidden hover:border-coral/30 transition-all duration-500 hover:shadow-2xl hover:shadow-coral/10 hover:-translate-y-2 flex flex-col h-full ${link ? 'cursor-pointer' : ''} ${className}`}
     >
       <div className="aspect-video bg-gradient-to-br from-muted/30 to-muted/50 relative overflow-hidden">
         {image ? (

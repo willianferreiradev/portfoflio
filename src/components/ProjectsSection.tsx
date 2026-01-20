@@ -3,14 +3,7 @@
 import { ProjectBadge } from './ProjectBadge';
 import { ProjectCard } from './ProjectCard';
 import { ExternalLink } from 'lucide-react';
-
-interface ProjectItem {
-  title: string;
-  description: string;
-  technologies: string[];
-  image?: string;
-  link?: string;
-}
+import { ProjectItem } from '@/types/project';
 
 interface ProjectsSectionProps {
   id?: string;
@@ -34,26 +27,7 @@ export function ProjectsSection({
     part2: 'Selecionados',
   },
   description = 'Uma vitrine de soluções criativas que ultrapassam limites e oferecem experiências excepcionais.',
-  projects = [
-    {
-      title: 'Painel de Analytics',
-      description:
-        'Uma plataforma abrangente de analytics com visualização de dados em tempo real, relatórios personalizados e insights acionáveis.',
-      technologies: ['React', 'TypeScript', 'Charts'],
-    },
-    {
-      title: 'App Mobile E-Commerce',
-      description:
-        'Experiência de compras móvel multiplataforma com checkout perfeito, busca de produtos e recursos avançados.',
-      technologies: ['React Native', 'Node.js', 'Stripe'],
-    },
-    {
-      title: 'Plataforma de Documentação API',
-      description:
-        'Ferramenta de documentação de API amigável para desenvolvedores com exemplos interativos, snippets de código e testes.',
-      technologies: ['TypeScript', 'REST API', 'Docs'],
-    },
-  ],
+  projects = [],
   className = '',
 }: ProjectsSectionProps) {
   return (
