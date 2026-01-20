@@ -66,7 +66,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-xl shadow-lg border-b border-white/10 py-3'
+          ? 'bg-background/95 backdrop-blur-xl shadow-lg border-b border-white/10 py-3 md:py-3 py-4'
           : 'bg-transparent py-6'
       }`}
     >
@@ -187,13 +187,13 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-xl border-b border-border animate-fade-in">
-          <nav className="container mx-auto px-4 py-8 flex flex-col gap-2">
+        <div className="md:hidden fixed inset-x-0 top-full bg-background/98 backdrop-blur-xl border-b border-border animate-fade-in min-h-screen z-40">
+          <nav className="container mx-auto px-4 py-8 flex flex-col gap-2 min-h-[calc(100vh-80px)]">
             {navLinks.map((link, index) => (
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-xl font-display font-medium text-foreground/80 hover:text-primary transition-colors text-left py-3 px-4 rounded-xl hover:bg-primary/5 animate-fade-in cursor-pointer"
+                className="text-xl font-display font-medium text-foreground/80 hover:text-primary transition-colors text-left py-4 px-4 rounded-xl hover:bg-primary/5 animate-fade-in cursor-pointer"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 {link.name}
@@ -201,16 +201,16 @@ export function Header() {
             ))}
 
             {/* Language selector in mobile */}
-            <div className="pt-4 mt-2 border-t border-border">
-              <p className="text-sm text-muted-foreground px-4 mb-3">
+            <div className="mt-auto pt-6 border-t border-border">
+              <p className="text-sm text-muted-foreground px-4 mb-4">
                 Language
               </p>
-              <div className="flex gap-2 px-4">
+              <div className="flex gap-2 px-4 mb-6">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => setCurrentLang(lang)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all cursor-pointer ${
+                    className={`flex items-center gap-2 px-4 py-3 rounded-xl border transition-all cursor-pointer ${
                       currentLang.code === lang.code
                         ? 'border-primary bg-primary/10 text-primary'
                         : 'border-border hover:border-primary/50'
@@ -223,27 +223,27 @@ export function Header() {
                   </button>
                 ))}
               </div>
-            </div>
 
-            <div className="flex items-center gap-3 pt-6 mt-4 border-t border-border">
-              {socialLinks.map((social) => (
-                <Button
-                  key={social.label}
-                  variant="outline"
-                  size="icon"
-                  asChild
-                  className="rounded-full hover:text-primary hover:border-primary"
-                >
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
+              <div className="flex items-center justify-center gap-4 px-4 pb-6">
+                {socialLinks.map((social) => (
+                  <Button
+                    key={social.label}
+                    variant="outline"
+                    size="icon"
+                    asChild
+                    className="rounded-full hover:text-primary hover:border-primary"
                   >
-                    <social.icon className="h-5 w-5" />
-                  </a>
-                </Button>
-              ))}
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                    >
+                      <social.icon className="h-5 w-5" />
+                    </a>
+                  </Button>
+                ))}
+              </div>
             </div>
           </nav>
         </div>

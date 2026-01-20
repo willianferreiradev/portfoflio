@@ -26,7 +26,7 @@ export function Hero({ id = 'hero', className = '' }: HeroProps) {
         <HeroActions className="mt-12" />
       </div>
 
-      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20">
+      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 hidden sm:block">
         <ScrollIndicator targetSection="#about" />
       </div>
 
