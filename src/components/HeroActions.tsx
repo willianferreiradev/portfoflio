@@ -68,7 +68,7 @@ export function HeroActions({
       <Button
         size="lg"
         onClick={handlePrimaryClick}
-        className="group bg-gradient-to-r from-coral to-coral-light hover:from-coral-light hover:to-coral text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-coral/25 animate-pulse-soft"
+        className="group bg-gradient-to-r from-coral to-coral-light hover:from-coral-light hover:to-coral text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-coral/25 animate-pulse-soft cursor-pointer"
       >
         <span className="mr-2">{primaryButton.text}</span>
         <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -78,7 +78,7 @@ export function HeroActions({
         variant="outline"
         size="lg"
         onClick={handleSecondaryClick}
-        className="group border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:border-coral font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+        className="group border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:border-coral font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm cursor-pointer"
       >
         <MessageCircle className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:rotate-12" />
         <span>{secondaryButton.text}</span>

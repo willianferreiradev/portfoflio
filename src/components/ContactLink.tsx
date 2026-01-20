@@ -51,7 +51,7 @@ export function ContactLink({
   return (
     <button
       onClick={handleClick}
-      className={`group relative p-6 bg-background/50 rounded-2xl border border-border/50 hover:border-coral/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-coral/10 flex items-center gap-4 w-full text-left ${className}`}
+      className={`group relative p-6 bg-background/50 rounded-2xl border border-border/50 hover:border-coral/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-coral/10 flex items-center gap-4 w-full text-left cursor-pointer ${className}`}
     >
       <div
         className={`w-12 h-12 rounded-xl bg-gradient-to-r ${colorClass} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}

@@ -10,14 +10,9 @@ interface ContactSectionProps {
 
 const contactLinks = [
   {
-    platform: 'GitHub',
-    url: 'github.com/willianferreiradev',
-    icon: 'github' as const,
-  },
-  {
-    platform: 'LinkedIn',
-    url: 'https://linkedin.com/in/willianferreiradev',
-    icon: 'linkedin' as const,
+    platform: 'WhatsApp',
+    url: '55 51 980615512',
+    icon: 'whatsapp' as const,
   },
   {
     platform: 'Email',
@@ -25,9 +20,14 @@ const contactLinks = [
     icon: 'email' as const,
   },
   {
-    platform: 'WhatsApp',
-    url: '55 51 980615512',
-    icon: 'whatsapp' as const,
+    platform: 'LinkedIn',
+    url: 'https://linkedin.com/in/willianferreiradev',
+    icon: 'linkedin' as const,
+  },
+  {
+    platform: 'GitHub',
+    url: 'github.com/willianferreiradev',
+    icon: 'github' as const,
   },
 ];
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 import { Github, Linkedin, Mail, Menu, X, ChevronDown } from 'lucide-react';
 import {
@@ -12,10 +13,10 @@ import {
 import { Button } from './ui/button';
 
 const navLinks = [
-  { name: 'Home', href: '#hero' },
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Início', href: '#hero' },
+  { name: 'Sobre', href: '#about' },
+  { name: 'Projetos', href: '#projects' },
+  { name: 'Contato', href: '#contact' },
 ];
 
 const socialLinks = [
@@ -34,6 +35,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState(languages[0]);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,6 +48,14 @@ export function Header() {
 
   const scrollToSection = (href: string) => {
     const id = href.replace('#', '');
+
+    // Se não estiver na página inicial, navega para lá primeiro
+    if (pathname !== '/') {
+      window.location.href = `/${href}`;
+      return;
+    }
+
+    // Se estiver na página inicial, faz scroll suave
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -61,11 +71,11 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center relative max-w-6xl mx-auto">
           {/* Logo/Brand */}
           <button
             onClick={() => scrollToSection('#hero')}
-            className="text-2xl md:text-3xl font-display font-bold transition-all duration-300 hover:scale-105"
+            className="absolute left-0 text-2xl md:text-3xl font-display font-bold transition-all duration-300 hover:scale-105 cursor-pointer"
           >
             <span
               className={
@@ -84,7 +94,7 @@ export function Header() {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className={`px-4 py-2 rounded-full font-medium transition-all duration-300 link-underline ${
+                className={`px-4 py-2 rounded-full font-medium transition-all duration-300 link-underline cursor-pointer ${
                   isScrolled
                     ? 'text-foreground/70 hover:text-primary hover:bg-primary/5'
                     : 'text-primary-foreground/80 hover:text-primary hover:bg-primary/10'
@@ -96,14 +106,14 @@ export function Header() {
           </nav>
 
           {/* Right side: Language + Social */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3 absolute right-0">
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`rounded-full gap-2 px-3 ${
+                  className={`rounded-full gap-2 px-3 cursor-pointer ${
                     isScrolled
                       ? 'hover:bg-primary/10'
                       : 'text-primary-foreground/80 hover:bg-primary/10'
@@ -139,7 +149,7 @@ export function Header() {
                 variant="ghost"
                 size="icon"
                 asChild
-                className={`rounded-full transition-all duration-300 hover:scale-110 ${
+                className={`rounded-full transition-all duration-300 hover:scale-110 cursor-pointer ${
                   isScrolled
                     ? 'hover:text-primary hover:bg-primary/10'
                     : 'text-primary-foreground/80 hover:text-primary hover:bg-primary/10'
@@ -161,7 +171,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className={`md:hidden rounded-full ${
+            className={`md:hidden rounded-full cursor-pointer ${
               !isScrolled && 'text-primary-foreground'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -183,7 +193,7 @@ export function Header() {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-xl font-display font-medium text-foreground/80 hover:text-primary transition-colors text-left py-3 px-4 rounded-xl hover:bg-primary/5 animate-fade-in"
+                className="text-xl font-display font-medium text-foreground/80 hover:text-primary transition-colors text-left py-3 px-4 rounded-xl hover:bg-primary/5 animate-fade-in cursor-pointer"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 {link.name}
@@ -200,7 +210,7 @@ export function Header() {
                   <button
                     key={lang.code}
                     onClick={() => setCurrentLang(lang)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all cursor-pointer ${
                       currentLang.code === lang.code
                         ? 'border-primary bg-primary/10 text-primary'
                         : 'border-border hover:border-primary/50'

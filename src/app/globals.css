@@ -2,6 +2,20 @@
 
 /* Bold Artistic Design System - Warm Coral & Deep Purple */
 
+/* Global interactive elements cursor */
+button,
+[role='button'],
+a[href],
+[onclick],
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+select,
+.cursor-pointer,
+[data-clickable] {
+  cursor: pointer;
+}
+
 @theme {
   /* Font families */
   --font-display: Syne, sans-serif;

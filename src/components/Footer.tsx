@@ -46,7 +46,7 @@ export function Footer({ className = '' }: FooterProps) {
                 <li>
                   <a
                     href="#inicio"
-                    className="text-muted-foreground hover:text-coral transition-colors duration-300"
+                    className="text-muted-foreground hover:text-coral transition-colors duration-300 cursor-pointer"
                   >
                     Início
                   </a>
@@ -54,7 +54,7 @@ export function Footer({ className = '' }: FooterProps) {
                 <li>
                   <a
                     href="#about"
-                    className="text-muted-foreground hover:text-coral transition-colors duration-300"
+                    className="text-muted-foreground hover:text-coral transition-colors duration-300 cursor-pointer"
                   >
                     Sobre
                   </a>
@@ -62,7 +62,7 @@ export function Footer({ className = '' }: FooterProps) {
                 <li>
                   <a
                     href="#projects"
-                    className="text-muted-foreground hover:text-coral transition-colors duration-300"
+                    className="text-muted-foreground hover:text-coral transition-colors duration-300 cursor-pointer"
                   >
                     Projetos
                   </a>
@@ -70,7 +70,7 @@ export function Footer({ className = '' }: FooterProps) {
                 <li>
                   <a
                     href="#contact"
-                    className="text-muted-foreground hover:text-coral transition-colors duration-300"
+                    className="text-muted-foregreen hover:text-coral transition-colors duration-300 cursor-pointer"
                   >
                     Contato
                   </a>
@@ -95,7 +95,7 @@ export function Footer({ className = '' }: FooterProps) {
                     >
                       {tech}
                     </span>
-                  )
+                  ),
                 )}
               </div>
               <div className="flex items-center justify-center md:justify-end text-sm text-muted-foreground">
